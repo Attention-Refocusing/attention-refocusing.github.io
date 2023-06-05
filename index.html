@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html class="fontawesome-i2svg-active fontawesome-i2svg-complete">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta property="og:title" content="Grounded Text-to-Image Synthesis with Attention-based Guidance">
+  <meta property="og:image" content="./images/teaser.jpg">
+  <meta property="og:description" content="Grounded Text-to-Image Synthesis with Attention-based Guidance">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="663">
+  <meta property="og:type" content="website">
+
+  <!-- Google tag (gtag.js) -->
+  <script async="" src="./assets/js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-9VZKE74FPW');
+  </script>
+  <title>Grounded Text-to-Image Synthesis with Attention-based Guidance</title>
+
+  <link href="./assets/css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/bulma.min.css">
+  <link rel="stylesheet" href="./assets/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./assets/bulma-slider.min.css">
+  <link rel="stylesheet" href="./assets/tab_gallery.css">
+  <link rel="stylesheet" href="./assets/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./assets/academicons.min.css">
+  <link rel="stylesheet" href="./assets/index.css">
+  <link rel="stylesheet" href="./assets/juxtapose.css">
+
+  <script src="./assets/jquery.min.js"></script>
+  <script defer="" src="./assets/fontawesome.all.min.js"></script>
+  <script src="./assets/bulma-carousel.min.js"></script>
+  <script src="./assets/bulma-slider.min.js"></script>
+  <script src="./assets/magnifier.js"></script>
+  <link href="./assets/menlo" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Akronim' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Sofia ' rel='stylesheet'>
+  <link rel="stylesheet" href="./assets/image_card_fader.css">
+  <link rel="stylesheet" href="./assets/image_card_slider.css">
+
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/menlo');
+  </style>
+</head>
+
+
+
+<body data-new-gr-c-s-check-loaded="14.1098.0" data-gr-ext-installed="">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">Grounded Text-to-Image Synthesis with Attention-based Guidance</h1>
+            <!-- <div class="is-size-5 publication-authors">
+                <span class="author-block"> 
+                <a href='https://qqphung.github.io/'>Quynh Phung</a>,</span>
+                <span class="author-block">
+                <a href="https://mingukkang.github.io/">Songwei Ge</a>,</span>
+              
+              <span class="author-block">
+                <a href="https://jbhuang0604.github.io/">Jia-Bin Huang</a>
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">University of Maryland, College Park,</span>
+            </div>
+            <div class="is-size-5 publication-venue">
+              in Submission
+            </div> -->
+            <div class="is-size-5 publication-venue">
+              Anonymous Authors
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <!-- <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false"
+                        data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 384 512" data-fa-i2svg="">
+                        <path fill="currentColor"
+                          d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z">
+                        </path>
+                      </svg><!-- <i class="fas fa-file-pdf"></i> Font Awesome fontawesome.com -->
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span> -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false"
+                        data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 496 512" data-fa-i2svg="">
+                        <path fill="currentColor"
+                          d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
+                        </path>
+                      </svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span> -->
+                <span class="link-block">
+                  <a href="./#bibtex" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-obp"></i>
+                    </span>
+                    <span>BibTex</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="has-text-justified">
+          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
+            <source src="./images/intro.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="has-text-justified">
+          <h2 class="title is-3 has-text-centered">Abstract</h2>
+          <p>
+            Text-to-image synthesis has been ushered into a new era by training scalable
+            diffusion models on large-scale paired text-image datasets. However, these
+            models still fail to precisely follow the text prompt when multiple objects,
+            attributes, and spatial compositions are involved in the prompt. In this
+            paper, we identify the potential reasons in both the cross-attention and
+            self-attention layers of the diffusion model. We propose two novel losses to
+            calibrate the attention maps according to a given layout during the sampling
+            process. We perform comprehensive experiments on the DrawBench and
+            HRS benchmarks using layouts synthesized by Large Language Models,
+            showing that our proposed losses slot in easily and effectively to existing
+            text-to-image methods and consistently improve their alignment between
+            the generated images and the text prompts.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h1 class="title is-3 has-text-centered">Our method improves image generation given prompts with counting, spatial, color, and
+            size compositions</h1>
+          <div class="container is-max-desktop has-text-centered">
+            <div class="content has-text-centered">
+              <img src="images/teaser.png" width="150%">
+            </div>
+          </div>
+          <br>
+          <hr>
+          <br>
+          <h3 class="title is-4 has-text-centered">HRS benchmark</h3>
+          <div class="content has-text-centered">
+            <div class="container">
+              <div class="row">
+                <div class=" mx-auto">
+                  <div class="well well-sm">
+                    <form class="form-inline">
+                      <div class="select is-rounded">
+                        <!-- <label for="hrs-cat-select">Category:&nbsp;</label> -->
+                        <select class="form-control" id="hrs-cat-select" oninput="ChangeHRSCat();">
+                          <option value="color" selected="true">Category</option>
+                          <option value="color">Color</option>
+                          <option value="counting">Counting</option>
+                          <option value="size">Size</option>
+                          <option value="spatial">Spatial</option>
+                        </select>
+                      </div>
+                      <div class="select is-rounded">
+                        <!-- <label for="hrs-method-select">Method:&nbsp;</label> -->
+                        <select class="form-control" id="hrs-method-select" oninput="ChangeHRSMethod();">
+                          <option value="ours" selected="true">Method</option>
+                          <option value="ours">Ours</option>
+                          <option value="stable">Stable Diffusion</option>
+                          <option value="att">Attend-and-Excite</option>
+                          <option value="gligen">GLIGEN</option>
+                          <option value="layout-guidance">Layout-Guidance</option>
+                          <option value="multi">MultiDiffusion</option>
+                        </select>
+                      </div>
+                      <div class="select is-rounded">
+                        <!-- <label for="hrs-id-select">Image ID:&nbsp;</label> -->
+                        <select class="form-control" id="hrs-id-select" oninput="ChangeHRSID();">
+                          <option value="1" selected="true">Image ID</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                    </form>
+                  </div>
+                  <br>
+                  <h4 id="method_title" style="font-weight:bold">Grounded Text-to-Image Synthesis with
+                    Attention-based Guidance</h4>
+                  <h6 id="method_author">Anonymous</h6>
+                </div>
+              </div>
+              <div class="columns is-centered">
+                <div class="column">
+                  <div class="content">
+                    <div class="tab_container">
+                      <img src="./images/hrs_comparison/box_layout/color/1.jpg" id="hrs_box" width="512">
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="content">
+                    <div class="tab_container">
+                      <img src="./images/hrs_comparison/ours/color/1.jpg" id="hrs_image" width="512">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span id="hrs_prompt" style="font-size:25px;">A blue airplane and a green car.
+            </span>
+          </div>
+        </div>
+      </div>
+      <br>
+      <hr>
+      <br>
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-4 has-text-centered">DrawBench</h2>
+          <div class="content has-text-centered">
+            <div class="container">
+              <div class="row">
+                <div class=" mx-auto">
+                  <div class="well well-sm">
+                    <form class="form-inline">
+                      <div class="select is-rounded">
+                        <select class="form-control" id="drawbench-cat-select"
+                          oninput="ChangeDrawBenchCat();">
+                          <option value="spatial" selected="trye">Category</option>
+                          <option value="spatial">Spatial</option>
+                          <option value="counting">Counting</option>
+                        </select>
+                      </div>
+                      <div class="select is-rounded">
+                        <select class="form-control" id="drawbench-method-select" oninput="ChangeDrawBenchMethod();">
+                          <option value="our" selected="true">Method</option>
+                          <option value="our">Ours</option>
+                          <option value="stable">Stable Diffusion</option>
+                          <option value="att">Attend-and-Excite</option>
+                          <option value="gligen">GLIGEN</option>
+                          <option value="layout_guidance">Layout-Guidance</option>
+                          <option value="multi_diffusion">MultiDiffusion</option>
+                        </select>
+                      </div>
+                      <div class="select is-rounded">
+                        <select class="form-control" id="drawbench-id-select" oninput="ChangeDrawBenchID();">
+                          <option value="1" selected="true">Image ID</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                        </select>
+                      </div>
+                    </form>
+                  </div>
+                  <br>
+                  <h4 id="method_title" style="font-weight:bold">Grounded Text-to-Image Synthesis with
+                    Attention-based Guidance</h4>
+                  <h6 id="method_author">Anonymous</h6>
+                </div>
+              </div>
+              <div class="columns is-centered">
+                <div class="column">
+                  <div class="content">
+                    <div class="tab_container">
+                      <img src="./images/drawbench_comparison/layout/spatial/1.jpg" id="drawbench_box"
+                        width="512">
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="content">
+                    <div class="tab_container">
+                      <img src="./images/drawbench_comparison/our/spatial/1.jpg" id="drawbench_image"
+                        width="512">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span id="drawbench_prompt" style="font-size:25px;">A banana on the left of an apple.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Method & Workflow -->
+  <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop has-text-centered">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <div class="content has-text-centered">
+              <h2 class="title is-4 has-text-centered">Our Attention-Refocusing framework.</h2>
+              <img src="images/method.png" width="150%">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ Method & Workflow -->
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered">
+              <div class="column is-full-width">
+                <h2 class="title is-3 has-text-centered">References</h2>
+                <div class="content has-text-justified">
+                  <p>
+                  </p>
+                  [1] Chitwan Saharia, William Chan, Saurabh Saxena, Lala Li, Jay Whang, Emily L Denton,
+                    Kamyar Ghasemipour, Raphael Gontijo Lopes, Burcu Karagol Ayan, Tim Salimans,
+                    et al.  <a href="https://arxiv.org/abs/2205.11487"> Photorealistic text-to-image
+                    iffusion models with deep language  understanding.</a> NeurIPS 2022.<br>
+                  [2] Eslam Mohamed Bakr, Pengzhan Sun, Xiaoqian Shen, Faizan Farooq Khan, Li Erran
+                    Li, and Mohamed Elhoseiny. <a href="https://arxiv.org/abs/2304.05390">HRS-Bench: Holistic, Reliable and Scalable
+                    Benchmark for Text-to-Image Models.</a> arXiv preprint arXiv:2304.05390, 2023.<br>
+                  [3] Hila Chefer, Yuval Alaluf, Yael Vinker, Lior Wolf, and Daniel Cohen-Or. <a
+                    href="https://arxiv.org/abs/2301.13826">Attend-and-excite: Attention-based semantic guidance for
+                    text-to-image diffusion models.</a>SIGGRAPH, 2023.<br>
+                  [4] HYuheng Li, Haotian Liu, Qingyang Wu, Fangzhou Mu, Jianwei Yang, Jianfeng Gao,
+                    Chunyuan Li, and Yong Jae Lee.. <a
+                    href="https://arxiv.org/abs/2301.07093">GLIGEN: Open-Set Grounded Text-to-Image
+                    Generation.</a> CVPR, 2023.<br>
+                  [5] Omer Bar-Tal, Lior Yariv, Yaron Lipman, and Tali Dekel. <a
+                    href="https://arxiv.org/abs/2301.07093">Multidiffusion: Fusing
+                    diffusion paths for controlled image generation.</a> ICML, 2023.<br>
+                  [6] Minghao Chen, Iro Laina, and Andrea Vedaldi. <a
+                    href="https://arxiv.org/abs/2304.03373">Training-Free Layout Control
+                    with Cross-Attention Guidance.</a> arXiv preprint arXiv:2304.03373.<br>
+                </div>
+                <!-- Prompt Interpolation image -->
+              </div>
+            </div>
+
+            <!-- Acknowledgements. -->
+            <!-- <div class="columns is-centered">
+              <div class="column is-full-width">
+                <h2 class="title is-3 has-text-centered">Acknowledgements</h2>
+                <div class="content has-text-justified">
+                  <p>
+                    This work is partly supported by NSF grants no. IIS-1910132 and IIS-2213335.
+                  </p>
+                </div>
+              </div>
+            </div> -->
+            <!--/ Acknowledgements. -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title"><a id="bibtex">BibTeX</a></h2>
+      <pre><code>@article{phung2023grounded,
+    title={Grounded Text-to-Image Synthesis with Attention-based Guidance},
+    author={Phun, Quynh and Ge, Songwei and Huang, Jia-Bin},
+    journal={arXiv preprint arXiv:},
+    year={2023}
+}</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+              href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website adapted from the following <a href="https://github.com/nerfies/nerfies.github.io">source code</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <script src="./assets/juxtapose.js"></script>
+
+  <script src="./assets/popper.min.js"></script>
+  <script src="./assets/bootstrap.min.js"></script>
+
+
+  <script type="text/javascript">
+
+    hrs_prompts = {
+      "images/hrs_comparison/stable/counting/1.jpg": "two apples are sitting in a kitchen next to three microwaves, waiting to be cooked or eaten.",
+      "images/hrs_comparison/stable/counting/2.jpg": "three sports balls (soccer, basketball, and football) are rolling around three bowls (cereal, soup, and salad) in a kitchen.",
+      "images/hrs_comparison/stable/counting/3.jpg": "two fire hydrants stand side-by-side in an alleyway, while three donuts lay on the ground nearby.",
+      "images/hrs_comparison/stable/counting/4.jpg": "three vases of different shapes and sizes are sitting on a shelf next to two wooden horses, one brown and one white.",
+      "images/hrs_comparison/stable/color/1.jpg": "a blue airplane and a green car.",
+      "images/hrs_comparison/stable/color/2.jpg": "a red chair and a yellow dog.",
+      "images/hrs_comparison/stable/color/3.jpg": "a green car and a blue chair.",
+      "images/hrs_comparison/stable/color/4.jpg": "a green banana and a blue chair.",
+      "images/hrs_comparison/stable/size/1.jpg": "a car and a dog, the car is smaller than the dog.",
+      "images/hrs_comparison/stable/size/2.jpg": "a dog and a chair, the dog is bigger than the chair.",
+      "images/hrs_comparison/stable/size/3.jpg": "a chair and a horse, the chair is bigger than the horse.",
+      "images/hrs_comparison/stable/size/4.jpg": "a horse and a person, the horse is smaller than the person.",
+      "images/hrs_comparison/stable/spatial/1.jpg": "a chair on the right of a horse.",
+      "images/hrs_comparison/stable/spatial/2.jpg": "a car over a horse.",
+      "images/hrs_comparison/stable/spatial/3.jpg": "a horse on the right of a chair and on a banana.",
+      "images/hrs_comparison/stable/spatial/4.jpg": "a dog beneath a car and on the left of a person.",
+      "images/hrs_comparison/gligen/counting/1.jpg": "two apples are sitting in a kitchen next to three microwaves, waiting to be cooked or eaten.",
+      "images/hrs_comparison/gligen/counting/2.jpg": "three sports balls (soccer, basketball, and football) are rolling around three bowls (cereal, soup, and salad) in a kitchen.",
+      "images/hrs_comparison/gligen/counting/3.jpg": "two fire hydrants stand side-by-side in an alleyway, while three donuts lay on the ground nearby.",
+      "images/hrs_comparison/gligen/counting/4.jpg": "three vases of different shapes and sizes are sitting on a shelf next to two wooden horses, one brown and one white.",
+      "images/hrs_comparison/gligen/color/1.jpg": "a blue airplane and a green car.",
+      "images/hrs_comparison/gligen/color/2.jpg": "a red chair and a yellow dog.",
+      "images/hrs_comparison/gligen/color/3.jpg": "a green car and a blue chair.",
+      "images/hrs_comparison/gligen/color/4.jpg": "a green banana and a blue chair.",
+      "images/hrs_comparison/gligen/size/1.jpg": "a car and a dog, the car is smaller than the dog.",
+      "images/hrs_comparison/gligen/size/2.jpg": "a dog and a chair, the dog is bigger than the chair.",
+      "images/hrs_comparison/gligen/size/3.jpg": "a chair and a horse, the chair is bigger than the horse.",
+      "images/hrs_comparison/gligen/size/4.jpg": "a horse and a person, the horse is smaller than the person.",
+      "images/hrs_comparison/gligen/spatial/1.jpg": "a chair on the right of a horse.",
+      "images/hrs_comparison/gligen/spatial/2.jpg": "a car over a horse.",
+      "images/hrs_comparison/gligen/spatial/3.jpg": "a horse on the right of a chair and on a banana.",
+      "images/hrs_comparison/gligen/spatial/4.jpg": "a dog beneath a car and on the left of a person.",
+      "images/hrs_comparison/multi/counting/1.jpg": "two apples are sitting in a kitchen next to three microwaves, waiting to be cooked or eaten.",
+      "images/hrs_comparison/multi/counting/2.jpg": "three sports balls (soccer, basketball, and football) are rolling around three bowls (cereal, soup, and salad) in a kitchen.",
+      "images/hrs_comparison/multi/counting/3.jpg": "two fire hydrants stand side-by-side in an alleyway, while three donuts lay on the ground nearby.",
+      "images/hrs_comparison/multi/counting/4.jpg": "three vases of different shapes and sizes are sitting on a shelf next to two wooden horses, one brown and one white.",
+      "images/hrs_comparison/multi/color/1.jpg": "a blue airplane and a green car.",
+      "images/hrs_comparison/multi/color/2.jpg": "a red chair and a yellow dog.",
+      "images/hrs_comparison/multi/color/3.jpg": "a green car and a blue chair.",
+      "images/hrs_comparison/multi/color/4.jpg": "a green banana and a blue chair.",
+      "images/hrs_comparison/multi/size/1.jpg": "a car and a dog, the car is smaller than the dog.",
+      "images/hrs_comparison/multi/size/2.jpg": "a dog and a chair, the dog is bigger than the chair.",
+      "images/hrs_comparison/multi/size/3.jpg": "a chair and a horse, the chair is bigger than the horse.",
+      "images/hrs_comparison/multi/size/4.jpg": "a horse and a person, the horse is smaller than the person.",
+      "images/hrs_comparison/multi/spatial/1.jpg": "a chair on the right of a horse.",
+      "images/hrs_comparison/multi/spatial/2.jpg": "a car over a horse.",
+      "images/hrs_comparison/multi/spatial/3.jpg": "a horse on the right of a chair and on a banana.",
+      "images/hrs_comparison/multi/spatial/4.jpg": "a dog beneath a car and on the left of a person.",
+      "images/hrs_comparison/layout-guidance/counting/1.jpg": "two apples are sitting in a kitchen next to three microwaves, waiting to be cooked or eaten.",
+      "images/hrs_comparison/layout-guidance/counting/2.jpg": "three sports balls (soccer, basketball, and football) are rolling around three bowls (cereal, soup, and salad) in a kitchen.",
+      "images/hrs_comparison/layout-guidance/counting/3.jpg": "two fire hydrants stand side-by-side in an alleyway, while three donuts lay on the ground nearby.",
+      "images/hrs_comparison/layout-guidance/counting/4.jpg": "three vases of different shapes and sizes are sitting on a shelf next to two wooden horses, one brown and one white.",
+      "images/hrs_comparison/layout-guidance/color/1.jpg": "a blue airplane and a green car.",
+      "images/hrs_comparison/layout-guidance/color/2.jpg": "a red chair and a yellow dog.",
+      "images/hrs_comparison/layout-guidance/color/3.jpg": "a green car and a blue chair.",
+      "images/hrs_comparison/layout-guidance/color/4.jpg": "a green banana and a blue chair.",
+      "images/hrs_comparison/layout-guidance/size/1.jpg": "a car and a dog, the car is smaller than the dog.",
+      "images/hrs_comparison/layout-guidance/size/2.jpg": "a dog and a chair, the dog is bigger than the chair.",
+      "images/hrs_comparison/layout-guidance/size/3.jpg": "a chair and a horse, the chair is bigger than the horse.",
+      "images/hrs_comparison/layout-guidance/size/4.jpg": "a horse and a person, the horse is smaller than the person.",
+      "images/hrs_comparison/layout-guidance/spatial/1.jpg": "a chair on the right of a horse.",
+      "images/hrs_comparison/layout-guidance/spatial/2.jpg": "a car over a horse.",
+      "images/hrs_comparison/layout-guidance/spatial/3.jpg": "a horse on the right of a chair and on a banana.",
+      "images/hrs_comparison/layout-guidance/spatial/4.jpg": "a dog beneath a car and on the left of a person.",
+      "images/hrs_comparison/ours/counting/1.jpg": "two apples are sitting in a kitchen next to three microwaves, waiting to be cooked or eaten.",
+      "images/hrs_comparison/ours/counting/2.jpg": "three sports balls (soccer, basketball, and football) are rolling around three bowls (cereal, soup, and salad) in a kitchen.",
+      "images/hrs_comparison/ours/counting/3.jpg": "two fire hydrants stand side-by-side in an alleyway, while three donuts lay on the ground nearby.",
+      "images/hrs_comparison/ours/counting/4.jpg": "three vases of different shapes and sizes are sitting on a shelf next to two wooden horses, one brown and one white.",
+      "images/hrs_comparison/ours/color/1.jpg": "a blue airplane and a green car.",
+      "images/hrs_comparison/ours/color/2.jpg": "a red chair and a yellow dog.",
+      "images/hrs_comparison/ours/color/3.jpg": "a green car and a blue chair.",
+      "images/hrs_comparison/ours/color/4.jpg": "a green banana and a blue chair.",
+      "images/hrs_comparison/ours/size/1.jpg": "a car and a dog, the car is smaller than the dog.",
+      "images/hrs_comparison/ours/size/2.jpg": "a dog and a chair, the dog is bigger than the chair.",
+      "images/hrs_comparison/ours/size/3.jpg": "a chair and a horse, the chair is bigger than the horse.",
+      "images/hrs_comparison/ours/size/4.jpg": "a horse and a person, the horse is smaller than the person.",
+      "images/hrs_comparison/ours/spatial/1.jpg": "a chair on the right of a horse.",
+      "images/hrs_comparison/ours/spatial/2.jpg": "a car over a horse.",
+      "images/hrs_comparison/ours/spatial/3.jpg": "a horse on the right of a chair and on a banana.",
+      "images/hrs_comparison/ours/spatial/4.jpg": "a dog beneath a car and on the left of a person.",
+      "images/hrs_comparison/box_layout/counting/1.jpg": "apples are sitting in a kitchen next to three microwaves, waiting to be cooked or eaten..jpg.",
+      "images/hrs_comparison/box_layout/counting/2.jpg": "three sports balls (soccer, basketball, and football) are rolling around three bowls (cereal, soup, and salad) in a kitchen.",
+      "images/hrs_comparison/box_layout/counting/3.jpg": "two fire hydrants stand side-by-side in an alleyway, while three donuts lay on the ground nearby.",
+      "images/hrs_comparison/box_layout/counting/4.jpg": "three vases of different shapes and sizes are sitting on a shelf next to two wooden horses, one brown and one white.",
+      "images/hrs_comparison/box_layout/color/1.jpg": "blue airplane and a green car.",
+      "images/hrs_comparison/box_layout/color/2.jpg": "red chair and a yellow dog.",
+      "images/hrs_comparison/box_layout/color/3.jpg": "green car and a blue chair.",
+      "images/hrs_comparison/box_layout/color/4.jpg": "green banana and a blue chair.",
+      "images/hrs_comparison/box_layout/size/1.jpg": "car and a dog, the car is smaller than the dog.",
+      "images/hrs_comparison/box_layout/size/2.jpg": "dog and a chair, the dog is bigger than the chair.",
+      "images/hrs_comparison/box_layout/size/3.jpg": "chair and a horse, the chair is bigger than the horse.",
+      "images/hrs_comparison/box_layout/size/4.jpg": "horse and a person, the horse is smaller than the person.",
+      "images/hrs_comparison/box_layout/spatial/1.jpg": "chair on the right of a horse.",
+      "images/hrs_comparison/box_layout/spatial/2.jpg": "car over a horse.",
+      "images/hrs_comparison/box_layout/spatial/3.jpg": "horse on the right of a chair and on a banana",
+      "images/hrs_comparison/box_layout/spatial/4.jpg": "dog beneath a car and on the left of a person",
+      "images/hrs_comparison/att/counting/1.jpg": "two apples are sitting in a kitchen next to three microwaves, waiting to be cooked or eaten.",
+      "images/hrs_comparison/att/counting/2.jpg": "three sports balls (soccer, basketball, and football) are rolling around three bowls (cereal, soup, and salad) in a kitchen.",
+      "images/hrs_comparison/att/counting/3.jpg": "two fire hydrants stand side-by-side in an alleyway, while three donuts lay on the ground nearby.",
+      "images/hrs_comparison/att/counting/4.jpg": "three vases of different shapes and sizes are sitting on a shelf next to two wooden horses, one brown and one white.",
+      "images/hrs_comparison/att/color/1.jpg": "a blue airplane and a green car.",
+      "images/hrs_comparison/att/color/2.jpg": "a red chair and a yellow dog.",
+      "images/hrs_comparison/att/color/3.jpg": "a green car and a blue chair.",
+      "images/hrs_comparison/att/color/4.jpg": "a green banana and a blue chair.",
+      "images/hrs_comparison/att/size/1.jpg": "a car and a dog, the car is smaller than the dog.",
+      "images/hrs_comparison/att/size/2.jpg": "a dog and a chair, the dog is bigger than the chair.",
+      "images/hrs_comparison/att/size/3.jpg": "a chair and a horse, the chair is bigger than the horse.",
+      "images/hrs_comparison/att/size/4.jpg": "a horse and a person, the horse is smaller than the person.",
+      "images/hrs_comparison/att/spatial/1.jpg": "a chair on the right of a horse.",
+      "images/hrs_comparison/att/spatial/2.jpg": "a car over a horse.",
+      "images/hrs_comparison/att/spatial/3.jpg": "a horse on the right of a chair and on a banana.",
+      "images/hrs_comparison/att/spatial/4.jpg": "a dog beneath a car and on the left of a person.",
+    }
+    var currentHRSCategory = "color";
+    var currentHRSMethod = "ours";
+    var currentHRSID = "1";
+
+    function ChangeHRSCat() {
+
+      var currentHRSCategory = document.getElementById("hrs-cat-select").value;
+
+      ChangeHRSImage();
+    }
+
+    function ChangeHRSID() {
+
+      var currentHRSID = document.getElementById("hrs-id-select").value;
+
+      ChangeHRSImage();
+    }
+
+
+    function ChangeHRSMethod() {
+      var currentHRSMethod = document.getElementById("hrs-method-select").value;
+      if (currentHRSMethod == 'att') {
+        document.getElementById("method_author").innerHTML = "Hila Chefer, Yuval Alaluf, Yael Vinker, Lior Wolf, and Daniel Cohen-Or. <br> *Boxes are not used in this method.";
+        document.getElementById("method_title").innerHTML = "Attend-and-excite: Attention-based semantic guidance for text-to-image diffusion models";
+      }
+      else if (currentHRSMethod == 'layout-guidance') {
+        document.getElementById("method_author").innerHTML = "Minghao Chen, Iro Laina, and Andrea Vedaldi.";
+        document.getElementById("method_title").innerHTML = "Training-Free Layout Control with Cross-Attention Guidance";
+      }
+      else if (currentHRSMethod == 'gligen') {
+        document.getElementById("method_author").innerHTML = "Yuheng Li, Haotian Liu, Qingyang Wu, Fangzhou Mu, Jianwei Yang, Jianfeng Gao, Chunyuan Li, and Yong Jae Lee.";
+        document.getElementById("method_title").innerHTML = "GLIGEN: Open-Set Grounded Text-to-Image Generation";
+      }
+      else if (currentHRSMethod == 'multi') {
+        document.getElementById("method_author").innerHTML = "Omer Bar-Tal, Lior Yariv, Yaron Lipman, and Tali Dekel.";
+        document.getElementById("method_title").innerHTML = "Multidiffusion: Fusing diffusion paths for controlled image generation.";
+      }
+      else if (currentHRSMethod == 'stable') {
+        document.getElementById("method_author").innerHTML = "Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Björn Ommer. <br> *Boxes are not used in this method.";
+        document.getElementById("method_title").innerHTML = "High-resolution image synthesis with latent diffusion models";
+      }
+      else {
+        document.getElementById("method_author").innerHTML = "Anonymous";
+        document.getElementById("method_title").innerHTML = "Grounded Text-to-Image Synthesis with Attention-based Guidance";
+      }
+
+      ChangeHRSImage();
+    }
+
+    function ChangeHRSImage() {
+      var currentHRSCategory = document.getElementById("hrs-cat-select").value;
+      var currentHRSMethod = document.getElementById("hrs-method-select").value;
+      var currentHRSID = document.getElementById("hrs-id-select").value;
+
+      // Specify the directory path
+      const directoryPath = "images/hrs_comparison/" + currentHRSMethod + "/" + currentHRSCategory + "/" + currentHRSID + ".jpg";
+
+      var hrs_image = document.getElementById('hrs_image');
+      hrs_image.src = "./images/hrs_comparison/" + currentHRSMethod + "/" + currentHRSCategory + "/" + currentHRSID + ".jpg";
+
+      var hrs_box = document.getElementById('hrs_box');
+      hrs_box.src = "./images/hrs_comparison/box_layout/" + currentHRSCategory + "/" + currentHRSID + ".jpg";
+
+      var hrs_prompt = document.getElementById('hrs_prompt');
+      hrs_prompt.innerText = hrs_prompts[directoryPath]
+
+    }
+
+    drawbench_prompts = {
+      "images/drawbench_comparison/stable/counting/1.jpg": "One cat and two dogs sitting on the grass.",
+      "images/drawbench_comparison/stable/counting/4.jpg": "Two cats and three dogs sitting on the grass.",
+      "images/drawbench_comparison/stable/counting/7.jpg": "Three cats and one dog sitting on the grass.",
+      "images/drawbench_comparison/stable/counting/9.jpg": "Three cats and two dogs sitting on the grass.",
+      "images/drawbench_comparison/stable/counting/2.jpg": "Two cars on the street.",
+      "images/drawbench_comparison/stable/counting/5.jpg": "Three cars on the street.",
+      "images/drawbench_comparison/stable/counting/10.jpg": "Five cars on the street.",
+      "images/drawbench_comparison/stable/counting/3.jpg": "Two dogs on the street.",
+      "images/drawbench_comparison/stable/counting/6.jpg": "Three dogs on the street.",
+      "images/drawbench_comparison/stable/spatial/1.jpg": "A banana on the left of an apple.",
+      "images/drawbench_comparison/stable/spatial/4.jpg": "A car on the left of a bus.",
+      "images/drawbench_comparison/stable/spatial/7.jpg": "A cat on the left of a dog.",
+      "images/drawbench_comparison/stable/spatial/9.jpg": "A pizza on the right of a suitcase.",
+      "images/drawbench_comparison/stable/spatial/2.jpg": "A cat on the right of a tennis racket.",
+      "images/drawbench_comparison/stable/spatial/5.jpg": "A stop sign on the right of a refrigerator.",
+      "images/drawbench_comparison/stable/spatial/8.jpg": "A zebra to the right of a fire hydrant.",
+      "images/drawbench_comparison/stable/spatial/10.jpg": "A wine glass on top of a dog.",
+      "images/drawbench_comparison/stable/spatial/3.jpg": "A bicycle on top of a boat.",
+      "images/drawbench_comparison/stable/spatial/6.jpg": "A giraffe underneath a microwave.",
+      "images/drawbench_comparison/gligen/counting/1.jpg": "One cat and two dogs sitting on the grass.",
+      "images/drawbench_comparison/gligen/counting/4.jpg": "Two cats and three dogs sitting on the grass.",
+      "images/drawbench_comparison/gligen/counting/7.jpg": "Three cats and one dog sitting on the grass.",
+      "images/drawbench_comparison/gligen/counting/9.jpg": "Three cats and two dogs sitting on the grass.",
+      "images/drawbench_comparison/gligen/counting/2.jpg": "Two cars on the street.",
+      "images/drawbench_comparison/gligen/counting/5.jpg": "Three cars on the street.",
+      "images/drawbench_comparison/gligen/counting/8.jpg": "Four cars on the street.",
+      "images/drawbench_comparison/gligen/counting/10.jpg": "Five cars on the street.",
+      "images/drawbench_comparison/gligen/counting/3.jpg": "Two dogs on the street.",
+      "images/drawbench_comparison/gligen/counting/6.jpg": "Three dogs on the street.",
+      "images/drawbench_comparison/gligen/spatial/1.jpg": "A banana on the left of an apple.",
+      "images/drawbench_comparison/gligen/spatial/4.jpg": "A car on the left of a bus.",
+      "images/drawbench_comparison/gligen/spatial/7.jpg": "A cat on the left of a dog.",
+      "images/drawbench_comparison/gligen/spatial/9.jpg": "A pizza on the right of a suitcase.",
+      "images/drawbench_comparison/gligen/spatial/2.jpg": "A cat on the right of a tennis racket.",
+      "images/drawbench_comparison/gligen/spatial/5.jpg": "A stop sign on the right of a refrigerator.",
+      "images/drawbench_comparison/gligen/spatial/8.jpg": "A zebra to the right of a fire hydrant.",
+      "images/drawbench_comparison/gligen/spatial/10.jpg": "A wine glass on top of a dog.",
+      "images/drawbench_comparison/gligen/spatial/3.jpg": "A bicycle on top of a boat.",
+      "images/drawbench_comparison/gligen/spatial/6.jpg": "A giraffe underneath a microwave.",
+      "images/drawbench_comparison/our/counting/1.jpg": "One cat and two dogs sitting on the grass.",
+      "images/drawbench_comparison/our/counting/4.jpg": "Two cats and three dogs sitting on the grass.",
+      "images/drawbench_comparison/our/counting/7.jpg": "Three cats and one dog sitting on the grass.",
+      "images/drawbench_comparison/our/counting/9.jpg": "Three cats and two dogs sitting on the grass.",
+      "images/drawbench_comparison/our/counting/2.jpg": "Two cars on the street.",
+      "images/drawbench_comparison/our/counting/5.jpg": "Three cars on the street.",
+      "images/drawbench_comparison/our/counting/8.jpg": "Four cars on the street.",
+      "images/drawbench_comparison/our/counting/10.jpg": "Five cars on the street.",
+      "images/drawbench_comparison/our/counting/3.jpg": "Two dogs on the street.",
+      "images/drawbench_comparison/our/counting/6.jpg": "Three dogs on the street.",
+      "images/drawbench_comparison/our/spatial/1.jpg": "A banana on the left of an apple.",
+      "images/drawbench_comparison/our/spatial/4.jpg": "A car on the left of a bus.",
+      "images/drawbench_comparison/our/spatial/7.jpg": "A cat on the left of a dog.",
+      "images/drawbench_comparison/our/spatial/9.jpg": "A pizza on the right of a suitcase.",
+      "images/drawbench_comparison/our/spatial/2.jpg": "A cat on the right of a tennis racket.",
+      "images/drawbench_comparison/our/spatial/5.jpg": "A stop sign on the right of a refrigerator.",
+      "images/drawbench_comparison/our/spatial/8.jpg": "A zebra to the right of a fire hydrant.",
+      "images/drawbench_comparison/our/spatial/10.jpg": "A wine glass on top of a dog.",
+      "images/drawbench_comparison/our/spatial/3.jpg": "A bicycle on top of a boat.",
+      "images/drawbench_comparison/our/spatial/6.jpg": "A giraffe underneath a microwave.",
+      "images/drawbench_comparison/layout/counting/1.jpg": "cat and two dogs sitting on the grass.",
+      "images/drawbench_comparison/layout/counting/4.jpg": "cats and three dogs sitting on the grass.",
+      "images/drawbench_comparison/layout/counting/7.jpg": "cats and one dog sitting on the grass.",
+      "images/drawbench_comparison/layout/counting/9.jpg": "cats and two dogs sitting on the grass.",
+      "images/drawbench_comparison/layout/counting/2.jpg": "cars on the street.",
+      "images/drawbench_comparison/layout/counting/5.jpg": "cars on the street.",
+      "images/drawbench_comparison/layout/counting/8.jpg": "cars on the street.",
+      "images/drawbench_comparison/layout/counting/10.jpg": "cars on the street.",
+      "images/drawbench_comparison/layout/counting/3.jpg": "dogs on the street.",
+      "images/drawbench_comparison/layout/counting/6.jpg": "dogs on the street.",
+      "images/drawbench_comparison/layout/spatial/1.jpg": "banana on the left of an apple.",
+      "images/drawbench_comparison/layout/spatial/4.jpg": "car on the left of a bus.",
+      "images/drawbench_comparison/layout/spatial/7.jpg": "cat on the left of a dog.",
+      "images/drawbench_comparison/layout/spatial/9.jpg": "pizza on the right of a suitcase.",
+      "images/drawbench_comparison/layout/spatial/2.jpg": "cat on the right of a tennis racket.",
+      "images/drawbench_comparison/layout/spatial/5.jpg": "stop sign on the right of a refrigerator.",
+      "images/drawbench_comparison/layout/spatial/8.jpg": "zebra to the right of a fire hydrant.",
+      "images/drawbench_comparison/layout/spatial/10.jpg": "wine glass on top of a dog.",
+      "images/drawbench_comparison/layout/spatial/3.jpg": "bicycle on top of a boat.",
+      "images/drawbench_comparison/layout/spatial/6.jpg": "giraffe underneath a microwave.",
+      "images/drawbench_comparison/multi_diffusion/counting/1.jpg": "One cat and two dogs sitting on the grass.",
+      "images/drawbench_comparison/multi_diffusion/counting/4.jpg": "Two cats and three dogs sitting on the grass.",
+      "images/drawbench_comparison/multi_diffusion/counting/7.jpg": "Three cats and one dog sitting on the grass.",
+      "images/drawbench_comparison/multi_diffusion/counting/9.jpg": "Three cats and two dogs sitting on the grass.",
+      "images/drawbench_comparison/multi_diffusion/counting/2.jpg": "Two cars on the street.",
+      "images/drawbench_comparison/multi_diffusion/counting/8.jpg": "Four cars on the street.",
+      "images/drawbench_comparison/multi_diffusion/counting/10.jpg": "Five cars on the street.",
+      "images/drawbench_comparison/multi_diffusion/counting/3.jpg": "Two dogs on the street.",
+      "images/drawbench_comparison/multi_diffusion/counting/6.jpg": "Three dogs on the street.",
+      "images/drawbench_comparison/multi_diffusion/spatial/1.jpg": "A banana on the left of an apple.",
+      "images/drawbench_comparison/multi_diffusion/spatial/4.jpg": "A car on the left of a bus.",
+      "images/drawbench_comparison/multi_diffusion/spatial/7.jpg": "A cat on the left of a dog.",
+      "images/drawbench_comparison/multi_diffusion/spatial/9.jpg": "A pizza on the right of a suitcase.",
+      "images/drawbench_comparison/multi_diffusion/spatial/2.jpg": "A cat on the right of a tennis racket.",
+      "images/drawbench_comparison/multi_diffusion/spatial/5.jpg": "A stop sign on the right of a refrigerator.",
+      "images/drawbench_comparison/multi_diffusion/spatial/8.jpg": "A zebra to the right of a fire hydrant.",
+      "images/drawbench_comparison/multi_diffusion/spatial/10.jpg": "A wine glass on top of a dog.",
+      "images/drawbench_comparison/multi_diffusion/spatial/3.jpg": "A bicycle on top of a boat.",
+      "images/drawbench_comparison/multi_diffusion/spatial/6.jpg": "A giraffe underneath a microwave.",
+      "images/drawbench_comparison/layout_guidance/counting/1.jpg": "One cat and two dogs sitting on the grass.",
+      "images/drawbench_comparison/layout_guidance/counting/4.jpg": "Two cats and three dogs sitting on the grass.",
+      "images/drawbench_comparison/layout_guidance/counting/7.jpg": "Three cats and one dog sitting on the grass.",
+      "images/drawbench_comparison/layout_guidance/counting/2.jpg": "Two cars on the street.",
+      "images/drawbench_comparison/layout_guidance/counting/5.jpg": "Three cars on the street.",
+      "images/drawbench_comparison/layout_guidance/counting/8.jpg": "Four cars on the street.",
+      "images/drawbench_comparison/layout_guidance/counting/10.jpg": "Five cars on the street.",
+      "images/drawbench_comparison/layout_guidance/counting/3.jpg": "Two dogs on the street.",
+      "images/drawbench_comparison/layout_guidance/counting/6.jpg": "Three dogs on the street.",
+      "images/drawbench_comparison/layout_guidance/spatial/1.jpg": "A banana on the left of an apple.",
+      "images/drawbench_comparison/layout_guidance/spatial/4.jpg": "A car on the left of a bus.",
+      "images/drawbench_comparison/layout_guidance/spatial/7.jpg": "A cat on the left of a dog.",
+      "images/drawbench_comparison/layout_guidance/spatial/9.jpg": "A pizza on the right of a suitcase.",
+      "images/drawbench_comparison/layout_guidance/spatial/2.jpg": "A cat on the right of a tennis racket.",
+      "images/drawbench_comparison/layout_guidance/spatial/5.jpg": "A stop sign on the right of a refrigerator.",
+      "images/drawbench_comparison/layout_guidance/spatial/8.jpg": "A zebra to the right of a fire hydrant.",
+      "images/drawbench_comparison/layout_guidance/spatial/10.jpg": "A wine glass on top of a dog.",
+      "images/drawbench_comparison/layout_guidance/spatial/3.jpg": "A bicycle on top of a boat.",
+      "images/drawbench_comparison/layout_guidance/spatial/6.jpg": "A giraffe underneath a microwave.",
+      "images/drawbench_comparison/att/counting/1.jpg": "One cat and two dogs sitting on the grass.",
+      "images/drawbench_comparison/att/counting/4.jpg": "Two cats and three dogs sitting on the grass.",
+      "images/drawbench_comparison/att/counting/7.jpg": "Three cats and one dog sitting on the grass.",
+      "images/drawbench_comparison/att/counting/9.jpg": "Three cats and two dogs sitting on the grass.",
+      "images/drawbench_comparison/att/counting/2.jpg": "Two cars on the street.",
+      "images/drawbench_comparison/att/counting/5.jpg": "Three cars on the street.",
+      "images/drawbench_comparison/att/counting/8.jpg": "Four cars on the street.",
+      "images/drawbench_comparison/att/counting/10.jpg": "Five cars on the street.",
+      "images/drawbench_comparison/att/counting/3.jpg": "Two dogs on the street.",
+      "images/drawbench_comparison/att/counting/6.jpg": "Three dogs on the street.",
+      "images/drawbench_comparison/att/spatial/1.jpg": "A banana on the left of an apple.",
+      "images/drawbench_comparison/att/spatial/4.jpg": "A car on the left of a bus.",
+      "images/drawbench_comparison/att/spatial/7.jpg": "A cat on the left of a dog.",
+      "images/drawbench_comparison/att/spatial/9.jpg": "A pizza on the right of a suitcase.",
+      "images/drawbench_comparison/att/spatial/2.jpg": "A cat on the right of a tennis racket.",
+      "images/drawbench_comparison/att/spatial/5.jpg": "A stop sign on the right of a refrigerator.",
+      "images/drawbench_comparison/att/spatial/8.jpg": "A zebra to the right of a fire hydrant.",
+      "images/drawbench_comparison/att/spatial/10.jpg": "A wine glass on top of a dog.",
+      "images/drawbench_comparison/att/spatial/3.jpg": "A bicycle on top of a boat.",
+      "images/drawbench_comparison/att/spatial/6.jpg": "A giraffe underneath a microwave.",
+    }
+
+    var currentDrawBenchCategory = "color";
+    var currentDrawBenchMethod = "ours";
+    var currentDrawBenchID = "1";
+
+    function ChangeDrawBenchCat() {
+
+      var currentDrawBenchCategory = document.getElementById("drawbench-cat-select").value;
+
+      ChangeDrawBenchImage();
+    }
+
+    function ChangeDrawBenchID() {
+
+      var currentDrawBenchID = document.getElementById("drawbench-id-select").value;
+
+      ChangeDrawBenchImage();
+    }
+
+
+    function ChangeDrawBenchMethod() {
+      var currentDrawBenchMethod = document.getElementById("drawbench-method-select").value;
+      if (currentDrawBenchMethod == 'att') {
+        document.getElementById("method_author").innerHTML = "Hila Chefer, Yuval Alaluf, Yael Vinker, Lior Wolf, and Daniel Cohen-Or. <br> *Boxes are not used in this method.";
+        document.getElementById("method_title").innerHTML = "Attend-and-excite: Attention-based semantic guidance for text-to-image diffusion models";
+      }
+      else if (currentDrawBenchMethod == 'layout-guidance') {
+        document.getElementById("method_author").innerHTML = "Minghao Chen, Iro Laina, and Andrea Vedaldi.";
+        document.getElementById("method_title").innerHTML = "Training-Free Layout Control with Cross-Attention Guidance";
+      }
+      else if (currentDrawBenchMethod == 'gligen') {
+        document.getElementById("method_author").innerHTML = "Yuheng Li, Haotian Liu, Qingyang Wu, Fangzhou Mu, Jianwei Yang, Jianfeng Gao, Chunyuan Li, and Yong Jae Lee.";
+        document.getElementById("method_title").innerHTML = "GLIGEN: Open-Set Grounded Text-to-Image Generation";
+      }
+      else if (currentDrawBenchMethod == 'multi') {
+        document.getElementById("method_author").innerHTML = "Omer Bar-Tal, Lior Yariv, Yaron Lipman, and Tali Dekel.";
+        document.getElementById("method_title").innerHTML = "Multidiffusion: Fusing diffusion paths for controlled image generation.";
+      }
+      else if (currentDrawBenchMethod == 'stable') {
+        document.getElementById("method_author").innerHTML = "Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Björn Ommer. <br> *Boxes are not used in this method.";
+        document.getElementById("method_title").innerHTML = "High-resolution image synthesis with latent diffusion models";
+      }
+      else {
+        document.getElementById("method_author").innerHTML = "Anonymous";
+        document.getElementById("method_title").innerHTML = "Grounded Text-to-Image Synthesis with Attention-based Guidance";
+      }
+
+      ChangeDrawBenchImage();
+    }
+
+    function ChangeDrawBenchImage() {
+      var currentDrawBenchCategory = document.getElementById("drawbench-cat-select").value;
+      var currentDrawBenchMethod = document.getElementById("drawbench-method-select").value;
+      var currentDrawBenchID = document.getElementById("drawbench-id-select").value;
+
+      // Specify the directory path
+      const directoryPath = "images/drawbench_comparison/" + currentDrawBenchMethod + "/" + currentDrawBenchCategory + "/" + currentDrawBenchID + ".jpg";
+
+      var drawbench_image = document.getElementById('drawbench_image');
+      drawbench_image.src = "./images/drawbench_comparison/" + currentDrawBenchMethod + "/" + currentDrawBenchCategory + "/" + currentDrawBenchID + ".jpg";
+
+      var drawbench_box = document.getElementById('drawbench_box');
+      drawbench_box.src = "./images/drawbench_comparison/layout/" + currentDrawBenchCategory + "/" + currentDrawBenchID + ".jpg";
+
+      var drawbench_prompt = document.getElementById('drawbench_prompt');
+      drawbench_prompt.innerText = drawbench_prompts[directoryPath]
+
+    }
+
+  </script>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>
