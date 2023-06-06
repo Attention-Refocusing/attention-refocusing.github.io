@@ -192,15 +192,15 @@
             <h3 align="left"><strong>Next to:&nbsp;</strong></h3>
             <nav class="nav nav-pills" id="current-loc-ul">
               <a class="flex-sm-fill text-sm-center nav-link active" id="loc_tab1" href="javascript: void(0);"
-                onclick="ChangeLocation(0);">
+                onclick="ChangeObject(0);">
                 <h5>a potted plant</h5>
               </a>
               <a class="flex-sm-fill text-sm-center nav-link" id="loc_tab0" href="javascript: void(0);"
-                onclick="ChangeLocation(1);">
+                onclick="ChangeObject(1);">
                 <h5>a birthday cake</h5>
               </a>
               <a class="flex-sm-fill text-sm-center nav-link" id="loc_tab2" href="javascript: void(0);"
-                onclick="ChangeLocation(2);">
+                onclick="ChangeObject(2);">
                 <h5>a TV</h5>
               </a>
             </nav>
@@ -910,7 +910,7 @@
     var currentPro = "raccoon";
     var currentActList = ["crown", "party"];
     var currentAct = "crown";
-    var currentLocList = ["plant", "cake", "TV"];
+    var currentLocList = ["plant", "cake", "tv"];
     var currentLoc = "plant";
 
     function ChangeProtagonist(idx) {
@@ -941,7 +941,7 @@
       ChangeImageComp();
     }
 
-    function ChangeLocation(idx) {
+    function ChangeObject(idx) {
       var li_list = document.getElementById("current-loc-ul").children;
       console.log(idx);
       console.log(li_list);
