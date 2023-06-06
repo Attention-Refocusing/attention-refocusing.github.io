@@ -99,7 +99,7 @@
                   </a>
                 </span> -->
                 <span class="link-block">
-                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://github.com/Attention-Refocusing/attention-refocusing" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false"
                         data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg"
@@ -152,11 +152,11 @@
   <section class="hero">
     <div class="hero-body">
       <div class="ontainer is-max-desktop">
+        <h2 class="title is-3 has-text-centered" style="margin-bottom: 50px;margin-top:-20px;">Compositional Generation</h2>
         <div class="columns is-centered">
           <div class="col-md-4">
-            <br>
-            <h3 align="left"><strong>Animal:&nbsp;</strong></h3>
-            <nav class="nav nav-pills" id="current-pro-ul">
+            <!-- <h3 align="left"><strong>Animal:&nbsp;</strong></h3> -->
+            <nav class="nav nav-pills" id="current-pro-ul" style="margin-bottom: 50px;margin-top: 50px;">
               <a class="flex-sm-fill text-sm-center nav-link active" id="pro_tab0" href="javascript: void(0);"
                 onclick="ChangeProtagonist(0);">
                 <h5>a shiba inu dog</h5>
@@ -167,17 +167,15 @@
               </a>
               <a class="flex-sm-fill text-sm-center nav-link" id="pro_tab1" href="javascript: void(0);"
                 onclick="ChangeProtagonist(2);">
-                <h5>a panda</h5>
+                <h5>a raccoon</h5>
               </a>
               <a class="flex-sm-fill text-sm-center nav-link" id="pro_tab2" href="javascript: void(0);"
                 onclick="ChangeProtagonist(3);">
-                <h5>a raccoon</h5>
+                <h5>a panda</h5>
               </a>
             </nav>
-            <br>
-            <br>
-            <h3 align="left"><strong>Wearing:&nbsp;</strong></h3>
-            <nav class="nav nav-pills" id="current-act-ul">
+            <h3 align="left"><strong>Wearing&nbsp;</strong></h3>
+            <nav class="nav nav-pills" id="current-act-ul" style="margin-bottom: 50px;">
               <a class="flex-sm-fill text-sm-center nav-link active" id="act_tab0" href="javascript: void(0);"
                 onclick="ChangeWearing(0);">
                 <h5>a crown</h5>
@@ -186,10 +184,16 @@
                 onclick="ChangeWearing(1);">
                 <h5>a party hat</h5>
               </a>
+              <a class="flex-sm-fill text-sm-center nav-link" id="act_tab0" href="javascript: void(0);"
+                onclick="ChangeWearing(2);">
+                <h5>a cowboy hat</h5>
+              </a>
+              <a class="flex-sm-fill text-sm-center nav-link" id="act_tab0" href="javascript: void(0);"
+                onclick="ChangeWearing(3);">
+                <h5>a mushroom</h5>
+              </a>
             </nav>
-            <br>
-            <br>
-            <h3 align="left"><strong>Next to:&nbsp;</strong></h3>
+            <h3 align="left"><strong>Next to&nbsp;</strong></h3>
             <nav class="nav nav-pills" id="current-loc-ul">
               <a class="flex-sm-fill text-sm-center nav-link active" id="loc_tab1" href="javascript: void(0);"
                 onclick="ChangeObject(0);">
@@ -441,7 +445,7 @@
                     href="https://arxiv.org/abs/2301.13826">Attend-and-excite: Attention-based semantic guidance for
                     text-to-image diffusion models.</a>SIGGRAPH, 2023.<br>
                   [4] HYuheng Li, Haotian Liu, Qingyang Wu, Fangzhou Mu, Jianwei Yang, Jianfeng Gao,
-                  Chunyuan Li, and Yong Jae Lee.. <a href="https://arxiv.org/abs/2301.07093">GLIGEN: Open-Set Grounded
+                  Chunyuan Li, and Yong Jae Lee. <a href="https://arxiv.org/abs/2301.07093">GLIGEN: Open-Set Grounded
                     Text-to-Image
                     Generation.</a> CVPR, 2023.<br>
                   [5] Omer Bar-Tal, Lior Yariv, Yaron Lipman, and Tali Dekel. <a
@@ -907,8 +911,8 @@
 
   <script type="text/javascript">
     var currentProList = ["dog", "cat", "raccoon", "panda"];
-    var currentPro = "raccoon";
-    var currentActList = ["crown", "party"];
+    var currentPro = "dog";
+    var currentActList = ["crown", "party", 'cowboy', 'mushroom'];
     var currentAct = "crown";
     var currentLocList = ["plant", "cake", "tv"];
     var currentLoc = "plant";
