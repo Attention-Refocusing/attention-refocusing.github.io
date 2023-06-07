@@ -117,7 +117,7 @@
                     <span class="icon">
                       <i class="fas fa-edit"></i>
                     </span>
-                    <span>Demo</span>
+                    <span>Demo (Coming soon)</span>
                   </a>
                 </span>
                 <!-- <span class="link-block">
@@ -408,15 +408,19 @@
   <!-- Method & Workflow -->
   <section class="hero is-light">
     <div class="hero-body">
-      <div class="container is-max-desktop has-text-centered">
+      <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column is-full-width">
             <div class="content has-text-centered">
-              <h2 class="title is-3 has-text-centered">Attention refocusing framework</h2>
+              <h2 class="title is-3 has-text-centered">Attention Refocusing framework</h2>
               <img src="images/method.png" width="150%">
             </div>
           </div>
         </div>
+        <p>At each denoising step, we update the noise sample by optimizing our
+          Cross-Attention Refocusing (CAR) and Self-Attention Refocusing (SAR) losses (red block) before denoising with the predicted score (yellow block). For each cross-attention map, CAR is
+          designed to encourage a region to attend more to the corresponding token while discouraging the remaining region from attending to that
+          token (green block). For each self-attention map, SAR prevents the pixels in a region from attending to irrelevant regions (blue block).</p>
       </div>
     </div>
   </section>
