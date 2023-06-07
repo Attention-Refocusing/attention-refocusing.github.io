@@ -223,7 +223,7 @@
   <section class="hero is-light">
     <div class="hero-body">
       <div class="container is-max-desktop">
-        <div class="has-text-justified">
+        <div class="has-text-justified" style="padding: 0 120px">
           <h2 class="title is-3 has-text-centered">Abstract</h2>
           <p>
             Driven by scalable diffusion models trained on large-scale paired text-image datasets, text-to-image
@@ -418,9 +418,9 @@
           </div>
         </div>
         <p>At each denoising step, we update the noise sample by optimizing our
-          Cross-Attention Refocusing (CAR) and Self-Attention Refocusing (SAR) losses (red block) before denoising with the predicted score (yellow block). For each cross-attention map, CAR is
+          Cross-Attention Refocusing (CAR) and Self-Attention Refocusing (SAR) losses (<span style="color:#f0995f;">red block</span>) before denoising with the predicted score (<span style="color:#e8d071;">yellow block</span>). For each cross-attention map, CAR is
           designed to encourage a region to attend more to the corresponding token while discouraging the remaining region from attending to that
-          token (green block). For each self-attention map, SAR prevents the pixels in a region from attending to irrelevant regions (blue block).</p>
+          token (<span style="color:#a4df7f;">green block</span>). For each self-attention map, SAR prevents the pixels in a region from attending to irrelevant regions (<span style="color:#B4C7E7;">blue block</span>).</p>
       </div>
     </div>
   </section>
