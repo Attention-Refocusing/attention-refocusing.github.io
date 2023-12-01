@@ -19,9 +19,14 @@
 
     gtag('config', 'G-9VZKE74FPW');
   </script>
+
+
+
+
   <title>Grounded Text-to-Image Synthesis with Attention Refocusing</title>
 
   <link href="./assets/css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/css/bulma.min.css">
   <link rel="stylesheet" href="./assets/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./assets/css/bulma-slider.min.css">
@@ -32,6 +37,7 @@
   <link rel="stylesheet" href="./assets/css/juxtapose.css">
 
   <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/index.js"></script>
   <script defer="" src="./assets/js/fontawesome.all.min.js"></script>
   <script src="./assets/js/bulma-carousel.min.js"></script>
   <script src="./assets/js/bulma-slider.min.js"></script>
@@ -44,25 +50,61 @@
   <link href='https://fonts.googleapis.com/css?family=Sofia ' rel='stylesheet'>
   <link rel="stylesheet" href="./assets/css/image_card_fader.css">
   <link rel="stylesheet" href="./assets/css/image_card_slider.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+
+  <!-- <link href="./assets/css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./assets/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./assets/css/tab_gallery.css">
+ 
+  <link rel="stylesheet" href="./assets/css/academicons.min.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="./assets/css/juxtapose.css">
+  <link rel="stylesheet" href="./assets/css/image_card_fader.css">
+  <link rel="stylesheet" href="./assets/css/image_card_slider.css"> -->
+
+
+<!-- 
+  <link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Akronim' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Sofia ' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=VT323 ' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Playfair Display ' rel='stylesheet'>
+  <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/juxtapose.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script defer="" src="./assets/js/fontawesome.all.min.js"></script>
+  <script src="./assets/js/bulma-carousel.min.js"></script>
+  <script src="./assets/js/bulma-slider.min.js"></script>
+  <script src="./assets/js/magnifier.js"></script>
+  <link href="./assets/menlo" rel="stylesheet"> -->
+
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
 
   <style>
     @import url('https://fonts.cdnfonts.com/css/menlo');
-  </style>
+  </style> 
 </head>
 
 
 
 <body data-new-gr-c-s-check-loaded="14.1098.0" data-gr-ext-installed="">
+
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-2 publication-title">Grounded Text-to-Image Synthesis with Attention Refocusing</h1>
-            <!-- <div class="is-size-5 publication-authors">
-                <span class="author-block"> 
+            <div class="is-size-5 publication-authors">
+                <!-- <span class="author-block"> 
                 <a href='https://qqphung.github.io/'>Quynh Phung</a>,</span>
                 <span class="author-block">
                 <a href="https://mingukkang.github.io/">Songwei Ge</a>,</span>
@@ -77,27 +119,14 @@
             <div class="is-size-5 publication-venue">
               in Submission
             </div> -->
-            <div class="is-size-5 publication-venue">
+           <div class="is-size-5 publication-venue">
               Anonymous Authors
             </div>
+            
+          
 
             <div class="column has-text-centered">
               <div class="publication-links">
-                <!-- PDF Link. -->
-                <!-- <span class="link-block">
-                  <a href="" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <svg class="svg-inline--fa fa-file-pdf fa-w-12" aria-hidden="true" focusable="false"
-                        data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 384 512" data-fa-i2svg="">
-                        <path fill="currentColor"
-                          d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z">
-                        </path>
-                      </svg>
-                    </span>
-                    <span>Paper</span>
-                  </a>
-                </span> -->
                 <span class="link-block">
                   <a href="https://github.com/Attention-Refocusing/attention-refocusing" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -120,47 +149,99 @@
                     <span>Demo</span>
                   </a>
                 </span>
-                <!-- <span class="link-block">
-                  <a href="" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                  </a>
-                </span> -->
-                <!-- <span class="link-block">
-                  <a href="./#bibtex" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="ai ai-obp"></i>
-                    </span>
-                    <span>BibTex</span>
-                  </a>
-                </span> -->
+                <h2 class="title is-3" style="font-family:roboto; font-size:22px;" align="left">Content of the website:</h2>
+                <nav>
+                  <ul>
+                    <li><a href="#composition">Compositional Generation</a></li>
+                    <li><a href="#Plug-and-Play">Plug-and-Play attention refocusing to various text-to-image models</a></li>
+                    <li><a href="#gligen">Applying Attention Refocusing to GLIGEN</a></li>
+                    <li><a href="#ablation">Ablation study</a></li>
+                    <li><a href="#4methods">Comparison with existing methods</a></li>
+                    <li><a href="#control">Mask-based guidance</a></li>
+                    <li><a href="#application">Additional applications</a></li>
+                    <li><a href="#2stage">Two stages text-to-image generation</a></li>
+                    <li><a href="#dalle">Comparison between our two-stage text-to-image model and existing state-of-the-art methods</a></li>
+                    <li><a href="#niceprompt">Diverse generation from our method (GLIGEN+Ours)</a></li>
+                    
+                    
+                  </ul>
+                </nav>
+               
               </div>
             </div>
           </div>
         </div>
-        <div class="has-text-justified">
-          <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="" height="100%">
-            <source src="./images/intro.mp4" type="video/mp4">
-          </video>
+        <!-- <h2 class="title is-3" style="font-family:roboto; font-size:22px;" align="left">Content of the website:</h2>
+        <nav>
+          <ul>
+            <li><a href="#composition">Compositional Generation</a></li>
+            <li><a href="#Plug-and-Play">Plug-and-Play attention refocusing to various text-to-image models</a></li>
+            <li><a href="#gligen">Applying Attention Refocusing to GLIGEN</a></li>
+            <li><a href="#ablation">Ablation study</a></li>
+            <li><a href="#4methods">Comparison with existing methods</a></li>
+            <li><a href="#control">Mask-based guidance</a></li>
+            <li><a href="#application">Additional applications</a></li>
+            <li><a href="#2stage">Two stages text-to-image generation</a></li>
+            <li><a href="#dalle">Comparison between our two-stage text-to-image model and existing state-of-the-art methods</a></li>
+            <li><a href="#niceprompt">Diverse generation from our method (GLIGEN+Ours)</a></li>
+            
+            
+          </ul>
+        </nav> -->
+        <!-- <div class="has-text-justified">
+          <div class="columns is-centered">
+            
+           
+           <video id="dollyzoom" autoplay="" controls="" muted="" loop="" playsinline="">
+            <source src="./images/intro.mp4" type="video/mp4" >
+          </video> 
+          </div>
+          -->
         </div>
       </div>
     </div>
   </section>
-  <hr>
-  <section class="hero">
+  <section class="hero is-light">
     <div class="hero-body">
-      <div class="ontainer is-max-desktop">
-        <h2 class="title is-3 has-text-centered" style="margin-bottom: 50px;margin-top:-20px;">Compositional Generation</h2>
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <div class="content has-text-centered">
+              
+              <img src="images/teaser_v2.png" width="150%">
+            </div>
+          </div>
+        </div>
+        <p>
+          Controllable text-to-image synthesis with attention refocusing. We introduce a new framework to improve the controllability of
+          text-to-image synthesis given the text prompts. We first leverage GPT-4 to generate layouts from the text prompts and then use grounded
+          text-to-image methods to generate the images given the layouts and prompts. However, the detailed information, like the quantity, identity,
+          and attributes, is often still incorrect or mixed in the existing models. We propose a training-free method, attention-refocusing, to improve
+          on these aspects substantially. Our method is model-agnostic and can be applied to enhance the control capacity of methods like GLIGEN
+          (top row) and ControlNet (bottom rows)
+        </p>
+        
+          
+        
+      </div>
+    </div>
+  </section>
+
+
+  
+  <section class="hero" id="composition">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h1 class="title is-3 has-text-centered" style="margin-bottom: 50px;margin-top:-20px;">Compositional Generation</h1>
         <div class="columns is-centered">
           <div class="col-md-4">
             <!-- <h3 align="left"><strong>Animal:&nbsp;</strong></h3> -->
             <nav class="nav nav-pills" id="current-pro-ul" style="margin-bottom: 50px;margin-top: 50px;">
               <a class="flex-sm-fill text-sm-center nav-link active" id="pro_tab0" href="javascript: void(0);"
                 onclick="ChangeProtagonist(0);">
-                <h5>a shiba inu dog</h5>
-              </a>
+                <h5>a panda</h5>
+              </a> 
+              
               <a class="flex-sm-fill text-sm-center nav-link" id="pro_tab1" href="javascript: void(0);"
                 onclick="ChangeProtagonist(1);">
                 <h5>a cat</h5>
@@ -169,10 +250,11 @@
                 onclick="ChangeProtagonist(2);">
                 <h5>a raccoon</h5>
               </a>
-              <a class="flex-sm-fill text-sm-center nav-link" id="pro_tab2" href="javascript: void(0);"
+              <a class="flex-sm-fill text-sm-center nav-link " id="pro_tab2" href="javascript: void(0);"
                 onclick="ChangeProtagonist(3);">
-                <h5>a panda</h5>
+                <h5 >a shiba inu dog</h5>
               </a>
+              
             </nav>
             <h3 align="left"><strong>Wearing&nbsp;</strong></h3>
             <nav class="nav nav-pills" id="current-act-ul" style="margin-bottom: 50px;">
@@ -195,17 +277,19 @@
             </nav>
             <h3 align="left"><strong>Next to&nbsp;</strong></h3>
             <nav class="nav nav-pills" id="current-loc-ul">
-              <a class="flex-sm-fill text-sm-center nav-link active" id="loc_tab1" href="javascript: void(0);"
+              <a class="flex-sm-fill text-sm-center nav-link active" id="loc_tab2" href="javascript: void(0);"
                 onclick="ChangeObject(0);">
-                <h5>a potted plant</h5>
+                <h5>a TV</h5>
               </a>
+
+              
               <a class="flex-sm-fill text-sm-center nav-link" id="loc_tab0" href="javascript: void(0);"
                 onclick="ChangeObject(1);">
                 <h5>a birthday cake</h5>
               </a>
-              <a class="flex-sm-fill text-sm-center nav-link" id="loc_tab2" href="javascript: void(0);"
+              <a class="flex-sm-fill text-sm-center nav-link " id="loc_tab1" href="javascript: void(0);"
                 onclick="ChangeObject(2);">
-                <h5>a TV</h5>
+                <h5>a potted plant</h5>
               </a>
             </nav>
           </div>
@@ -220,212 +304,541 @@
       </div>
       <br>
   </section>
-  <section class="hero is-light">
+
+ 
+
+ 
+
+  
+
+    <!--/4 method -->
+   <section class="hero is-light" id="Plug-and-Play">
     <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="has-text-justified" style="padding: 0 120px">
-          <h2 class="title is-3 has-text-centered">Abstract</h2>
-          <p>
-            Driven by scalable diffusion models trained on large-scale paired text-image datasets, text-to-image
-            synthesis methods have shown compelling results. However, these models still fail to precisely follow the
-            text prompt when multiple objects, attributes, and spatial compositions are involved in the prompt. In this
-            paper, we identify the potential reasons in both the cross-attention and self-attention layers of the
-            diffusion model. We propose two novel losses to refocus the attention maps according to a given layout
-            during the sampling process. We perform comprehensive experiments on the DrawBench and HRS benchmarks using
-            layouts synthesized by Large Language Models, showing that our proposed losses can be integrated easily and
-            effectively into existing text-to-image methods and consistently improve their alignment between the
-            generated images and the text prompts.
-          </p>
+      <div class="container is-max-desktop is-centered">
+        <h2 class="title has-text-centered">Plug-and-Play attention refocusing to various text-to-image models</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-steve" style="align-items: center;">
+            <img src="images/SD_AE_MD/SD_dragon_4.png" id="output_image">
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="images/SD_AE_MD/SD_woman_3.png" id="output_image"  >
+          </div>
+          
+          <div class="item item-steve" style="align-items: center;">
+            <img src="images/SD_AE_MD/SD_cow_3.png" id="output_image">
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="images/SD_AE_MD/SD_teedy_2.png" id="output_image"  >
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="images/SD_AE_MD/LG_dog_3.png" id="output_image" >
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="images/SD_AE_MD/LG_orange_3.png" id="output_image" >
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="images/SD_AE_MD/GL_person_4.png" id="output_image">
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="images/SD_AE_MD/GL_horse_3.png" id="output_image">
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="images/SD_AE_MD/fox_v2.png" id="output_image"  >
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="images/SD_AE_MD/AE_giraffe_3.png" id="output_image"  >
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="images/SD_AE_MD/img_apple_2.png" id="output_image">
+          </div>
+          
+          <div class="item item-steve" style="align-items: center;">
+            <img src="images/SD_AE_MD/img_MD_3_dog.png" id="output_image">
+          </div>
+          <!-- <div class="item item-steve" style="align-items: center;">
+            <img src="images/SD_AE_MD/fox.png" id="output_image">
+          </div> -->
+          
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Gligen -->
+  <section class="hero " id="gligen">
+    <div class="hero-body">
+      <div class="container is-max-desktop is-centered">
+        <h2 class="title has-text-centered">Applying Attention Refocusing to GLIGEN [Li et al. CVPR 2023] </h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <!-- <div class="item item-shiba">
+            <img src="./images/gligen/img_apple.png" id="output_image">
+            
+          </div>
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h1 class="title is-3 has-text-centered">Our method improves image generation on counting,
-            spatial, color, and
-            size compositions</h1>
-          <div class="container is-max-desktop has-text-centered">
-            <div class="content has-text-centered">
-              <img src="images/quantitative.png" width="150%">
-            </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="./images/gligen/img_fox.png" id="output_image" >
+           
           </div>
-          <br>
-          <hr>
-          <br>
-          <h3 class="title is-3 has-text-centered">HRS benchmark [2]</h3>
-          <div class="content has-text-centered">
-            <div class="container">
-              <div class="row">
-                <div class=" mx-auto">
-                  <div class="well well-sm">
-                    <form class="form-inline">
-                      <div class="select is-rounded">
-                        <!-- <label for="hrs-cat-select">Category:&nbsp;</label> -->
-                        <select class="form-control" id="hrs-cat-select" oninput="ChangeHRSCat();">
-                          <option value="color" selected="true">Category</option>
-                          <option value="color">Color</option>
-                          <option value="counting">Counting</option>
-                          <option value="size">Size</option>
-                          <option value="spatial">Spatial</option>
-                        </select>
-                      </div>
-                      <div class="select is-rounded">
-                        <!-- <label for="hrs-method-select">Method:&nbsp;</label> -->
-                        <select class="form-control" id="hrs-method-select" oninput="ChangeHRSMethod();">
-                          <option value="ours" selected="true">Method</option>
-                          <option value="ours">Ours</option>
-                          <option value="stable">Stable Diffusion</option>
-                          <option value="att">Attend-and-Excite</option>
-                          <option value="gligen">GLIGEN</option>
-                          <option value="layout-guidance">Layout-Guidance</option>
-                          <option value="multi">MultiDiffusion</option>
-                        </select>
-                      </div>
-                      <div class="select is-rounded">
-                        <!-- <label for="hrs-id-select">Image ID:&nbsp;</label> -->
-                        <select class="form-control" id="hrs-id-select" oninput="ChangeHRSID();">
-                          <option value="1" selected="true">Image ID</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                        </select>
-                      </div>
-                    </form>
-                  </div>
-                  <br>
-                  <h4 id="method_title" style="font-weight:bold">Grounded Text-to-Image Synthesis with
-                    Attention Refocusing</h4>
-                  <h6 id="method_author">Anonymous</h6>
-                </div>
-              </div>
-              <div class="columns is-centered"  style="padding: 0 120px">
-                <div class="column">
-                  <div class="content">
-                    <div class="tab_container">
-                      <img src="./images/hrs_comparison/box_layout/color/1.jpg" id="hrs_box" width="512">
-                    </div>
-                  </div>
-                </div>
-                <div class="column">
-                  <div class="content">
-                    <div class="tab_container">
-                      <img src="./images/hrs_comparison/ours/color/1.jpg" id="hrs_image" width="512">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <p id="hrs_prompt" style="font-size:20px;margin-top: 10px;">A blue airplane and a green car.
-            </p>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="./images/gligen/img_astronaut.png" id="output_image" >
+           
           </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="./images/gligen/img_christmas.png" id="output_image" >
+           
+          </div> -->
+
+          <div class="item item-steve" style="align-items: center;">
+            <img src="./images/gligen/img_brocolli.png" id="output_image" >
+           
+          </div>
+          
+          <div class="item item-chair-tp">
+            
+            <img src="./images/gligen/img3.png" id="output_image">
+            <!-- <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/chair-tp.mp4"
+                      type="video/mp4">
+            </video> -->
+          </div>
+          <div class="item item-shiba">
+            <img src="./images/gligen/img5.png" id="output_image">
+            <!-- <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/shiba.mp4"
+                      type="video/mp4">
+            </video> -->
+          </div>
+          <div class="item item-shiba">
+            <img src="./images/gligen/img6.png" id="output_image">
+            
+          </div>
+          <div class="item item-shiba">
+            <img src="./images/gligen/img_7.png" id="output_image">
+            
+          </div>
+          <div class="item item-shiba">
+            <img src="./images/gligen/img_8.png" id="output_image">
+            
+          </div>
+          <div class="item item-shiba">
+            <img src="./images/gligen/img_9.png" id="output_image">
+            
+          </div>
+          <div class="item item-shiba">
+            <img src="./images/gligen/img_10.png" id="output_image">
+            
+          </div>
+          <div class="item item-shiba">
+            <img src="./images/gligen/img_horse_air.png" id="output_image">
+            
+          </div>
+          <div class="item item-shiba">
+            <img src="./images/gligen/img_11.png" id="output_image">
+            
+          </div>
+         
         </div>
       </div>
-      <br>
+    </div>
+  </section>
+
+<!-- 4 gligen end -->
+<!-- ablation -->
+<section class="hero is-light" id="ablation">
+  <div class="hero-body">
+    <div class="container is-max-desktop is-centered">
+      <h2 class="title has-text-centered">Ablation study</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        
+        <div class="item item-steve" style="align-items: center;">
+          <img src="./images/ablation/img3.png" id="output_image" >
+         
+        </div>
+        
+        <div class="item item-chair-tp">
+          
+          <img src="./images/ablation/img2.png" id="output_image">
+          <!-- <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video> -->
+        </div>
+        <div class="item item-shiba">
+          <img src="./images/ablation/img1.png" id="output_image">
+          <!-- <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video> -->
+        </div>
+        <div class="item item-shiba">
+          <img src="./images/ablation/img4.png" id="output_image">
+          
+        </div>
+        <div class="item item-shiba">
+          <img src="./images/ablation/img7.png" id="output_image">
+          
+        </div>
+        <div class="item item-shiba">
+          <img src="./images/ablation/img6.png" id="output_image">
+          
+        </div>
+        <div class="item item-shiba">
+          <img src="./images/ablation/img5.png" id="output_image">
+          
+        </div>
+        <!-- <div class="item item-shiba">
+          <img src="./images/gligen/img_10.png" id="output_image">
+          
+        </div>
+        <div class="item item-shiba">
+          <img src="./images/gligen/img_horse_air.png" id="output_image">
+          
+        </div>
+        <div class="item item-shiba">
+          <img src="./images/gligen/img_11.png" id="output_image">
+          
+        </div> -->
+       
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end ablation -->
+<section class="hero" id="4methods">
+  <div class="hero-body">
+    <div class="container is-max-desktop is-centered">
+      <h2 class="title has-text-centered">Comparison with existing methods</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve" style="align-items: center;" >
+          <img src="compare_4/img_0.png" id="output_image">
+        </div>
+        <div class="item item-steve" style="align-items: center;" >
+          <img src="compare_4/img_0_v2.png" id="output_image">
+        </div>
+        <div class="item item-steve" style="align-items: center;" >
+          <img src="compare_4/img_0_v3.png" id="output_image">
+        </div>
+        <div class="item item-steve" style="align-items: center;" >
+          <img src="compare_4/img_1.png" id="output_image">
+        </div>
+        <div class="item item-steve" style="align-items: center;">
+          <img src="compare_4/img_2.png" id="output_image"  >
+        </div>
+        <div class="item item-steve" style="align-items: center;">
+          <img src="compare_4/img_3.png" id="output_image" >
+        </div>
+        <div class="item item-steve" style="align-items: center;">
+          <img src="compare_4/img_4.png" id="output_image" >
+        </div>
+        <div class="item item-steve" style="align-items: center;">
+          <img src="compare_4/img_5.png" id="output_image">
+        </div>
+        <div class="item item-steve" style="align-items: center;">
+          <img src="compare_4/img_6.png" id="output_image">
+        </div>
+        <div class="item item-steve" style="align-items: center;">
+          <img src="compare_4/img_7.png" id="output_image">
+        </div>
+        <div class="item item-steve" style="align-items: center;">
+          <img src="compare_4/img_8.png" id="output_image">
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- controlnet -->
+<section class="hero is-light" id="control">
+  <div class="hero-body">
+    <h2 class="title has-text-centered">Mask-based guidance </h2>
+    <div class="container is-max-desktop is-centered">
+      
+      <h6 class="title has-text-centered">Applying Attention Refocusing to ControlNet </h6> 
+      <div id="results-carousel" class="carousel results-carousel">
+       
+        <div class="item item-steve" style="align-items: center;">
+          <img src="images/controlNet/img1.png" id="output_image"  >
+        </div>
+        <div class="item item-steve" style="align-items: center;">
+          <img src="images/controlNet/img9.png" id="output_image" >
+        </div>
+        <div class="item item-steve" style="align-items: center;">
+          <img src="images/controlNet/img3.png" id="output_image" >
+        </div>
+       
+        
+        <div class="item item-steve" style="align-items: center;">
+          <img src="images/controlNet/img5.png" id="output_image">
+        </div>
+        <div class="item item-steve" style="align-items: center;">
+          <img src="images/controlNet/img10.png" id="output_image">
+        </div>
+        <div class="item item-steve" style="align-items: center;">
+          <img src="images/controlNet/img6.png" id="output_image">
+        </div>
+        <div class="item item-steve" style="align-items: center;">
+          <img src="images/controlNet/img7.png" id="output_image">
+        </div>
+        
+        <div class="item item-steve" style="align-items: center;">
+          <img src="images/controlNet/img4.png" id="output_image">
+        </div>
+        
+      </div>
       <hr>
-      <br>
-      <div class="columns is-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-3 has-text-centered">DrawBench [1]</h2>
-          <div class="content has-text-centered">
-            <div class="container">
-              <div class="row">
-                <div class=" mx-auto">
-                  <div class="well well-sm">
-                    <form class="form-inline">
-                      <div class="select is-rounded">
-                        <select class="form-control" id="drawbench-cat-select" oninput="ChangeDrawBenchCat();">
-                          <option value="spatial" selected="trye">Category</option>
-                          <option value="spatial">Spatial</option>
-                          <option value="counting">Counting</option>
-                        </select>
-                      </div>
-                      <div class="select is-rounded">
-                        <select class="form-control" id="drawbench-method-select" oninput="ChangeDrawBenchMethod();">
-                          <option value="our" selected="true">Method</option>
-                          <option value="our">Ours</option>
-                          <option value="stable">Stable Diffusion</option>
-                          <option value="att">Attend-and-Excite</option>
-                          <option value="gligen">GLIGEN</option>
-                          <option value="layout_guidance">Layout-Guidance</option>
-                          <option value="multi_diffusion">MultiDiffusion</option>
-                        </select>
-                      </div>
-                      <div class="select is-rounded">
-                        <select class="form-control" id="drawbench-id-select" oninput="ChangeDrawBenchID();">
-                          <option value="1" selected="true">Image ID</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">8</option>
-                          <option value="9">9</option>
-                          <option value="10">10</option>
-                        </select>
-                      </div>
-                    </form>
-                  </div>
-                  <br>
-                  <h4 id="drawbench_method_title" style="font-weight:bold">Grounded Text-to-Image Synthesis with
-                    Attention Refocusing</h4>
-                  <h6 id="drawbench_method_author">Anonymous</h6>
-                </div>
-              </div>
-              <div class="columns is-centered" style="padding: 0 120px">
-                <div class="column">
-                  <div class="content">
-                    <div class="tab_container">
-                      <img src="./images/drawbench_comparison/layout/spatial/1.jpg" id="drawbench_box" width="512">
-                    </div>
-                  </div>
-                </div>
-                <div class="column">
-                  <div class="content">
-                    <div class="tab_container">
-                      <img src="./images/drawbench_comparison/our/spatial/1.jpg" id="drawbench_image" width="512">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <p id="drawbench_prompt" style="font-size:20px;margin-top:10px">A banana on the left of an apple.
-            </p>
-          </div>
+    </div>
+    
+
+    <div class="container is-max-desktop is-centered">
+      <h4 class="title has-text-centered">Comparison with DenseDiffusion [ Kim et al. ICCV 2023] </h4>
+      <div id="results-carousel" class="carousel results-carousel">
+       
+        <div class="item item-steve" style="align-items: center;">
+          <img src="images/mask/img0.png" id="output_image"  >
         </div>
+        <div class="item item-steve" style="align-items: center;">
+          <img src="images/mask/img1.png" id="output_image" >
+        </div>
+        <div class="item item-steve" style="align-items: center;">
+          <img src="images/mask/img2.png" id="output_image" >
+        </div>
+        <div class="item item-steve" style="align-items: center;">
+          <img src="images/mask/img3.png" id="output_image">
+        </div>
+        <div class="item item-steve" style="align-items: center;">
+          <img src="images/mask/img4.png" id="output_image">
+        </div>
+        <div class="item item-steve" style="align-items: center;">
+          <img src="images/mask/img5.png" id="output_image">
+        </div>
+        <div class="item item-steve" style="align-items: center;">
+          <img src="images/mask/img6.png" id="output_image">
+        </div>
+        <div class="item item-steve" style="align-items: center;">
+          <img src="images/mask/img7.png" id="output_image">
+        </div>
+        <div class="item item-steve" style="align-items: center;">
+          <img src="images/mask/img8.png" id="output_image">
+        </div>
+        
       </div>
     </div>
 
-  </section>
+  </div>
+</section>
+<!-- control -->
+
+
+    
+    
+
+    <!-- instruct -->
+    <!-- <section class="hero is-light">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column is-full-width">
+              <div class="content has-text-centered">
+                <h2 class="title is-3 has-text-centered">Additional Applications</h2>
+                <img src="images/halloween.gif" width="100%">
+              </div>
+            </div>
+          </div>
+         
+            
+          
+        </div>
+      </div>
+    </section> -->
+   
+    <section class="hero" id="application">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <h1 class="title is-3 has-text-centered" style="margin-bottom: 50px;margin-top:0px;">Additional applications</h1>
+          
+          <div class="columns is-centered">
+            
+              <img src="images/looped_cat_halloween_v2.gif" id ='out' width="70%">
+              
+            
+          </div>
+          <h2 class="title is-3 has-text-centered" style="font-family:roboto; font-size:22px">Instruct text-to-image model</h2>
+          <hr>
+          <div class="columns is-centered">
+            
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-3" id="output_canvas">
+              <div class=" has-text-centered">
+                
+                <p>
+                  <span style="font-family:roboto; font-size:18px">An air hot balloon in the sky, oil painting</span>
+                </p>
+               
+              </div>
+
+              <div class="row justify-content-center">
+                <img src="images/air_ballon_3.gif" id="output_image">
+              </div>
+              <hr>
+              
+            </div>
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-3" id="output_canvas">
+              <div class=" has-text-centered">
+                
+                <p>
+                  <span style="font-family:roboto; font-size:18px">A boat in the river, the sun setting</span>
+                  
+                </p>
+               
+              </div>
+
+              <div class="row justify-content-center">
+                <img src="images/boat.gif" id="output_image">
+              </div>
+            </div>
+          </div>
+          <h2 class="title is-3 has-text-centered" style="font-family:roboto; font-size:24px; margin-left: 60px">Objects shuffling  </h2>
+          </div>
+          </div>
+          </section>
 
   <!-- Method & Workflow -->
-  <section class="hero is-light">
+  <!-- <section class="hero is-light">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column is-full-width">
             <div class="content has-text-centered">
               <h2 class="title is-3 has-text-centered">Attention Refocusing framework</h2>
-              <img src="images/method.png" width="150%">
+              <img src="images/method_v2.png" width="150%">
             </div>
           </div>
         </div>
-        <p>At each denoising step, we update the noise sample by optimizing our
-          Cross-Attention Refocusing (CAR) and Self-Attention Refocusing (SAR) losses (<span style="color:#f0995f;">red block</span>) before denoising with the predicted score (<span style="color:#e8d071;">yellow block</span>). For each cross-attention map, CAR is
-          designed to encourage a region to attend more to the corresponding token while discouraging the remaining region from attending to that
-          token (<span style="color:#a4df7f;">green block</span>). For each self-attention map, SAR prevents the pixels in a region from attending to irrelevant regions (<span style="color:#B4C7E7;">blue block</span>).</p>
+        <p>The proposed Attention-Refocusing framework. At each denoising step, we update the noised sample by optimizing our LCAR
+          and LSAR losses (<span style="color:#f0995f;">red block</span>) before denoising with the predicted score (<span style="color:#e8d071;">yellow block</span>). For each cross-attention map, LCAR is designed to
+          encourage a region to attend more to the corresponding token while discouraging the remaining region from attending to that token (<span style="color:#a4df7f;">green block</span>). For each self-attention map, LSAR prevents the pixels in a region from attending to irrelevant regions (<span style="color:#B4C7E7;">blue block</span>)</p>
+          
+        
+      </div>
+    </div>
+  </section> -->
+  <!--/ Method & Workflow -->
+  <section class="hero is-light" id="2stage">
+    <div class="hero-body">
+      <div class="container is-max-desktop is-centered">
+       
+
+        <h2 class="title has-text-centered">Two stages text-to-image generation: GLIGEN +attention-refocusing as grounded text-to-image</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-steve" style="align-items: center;" >
+            <img src="./images/SD/SD5.png" id="output_image">
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="./images/SD/SD1.png" id="output_image"  >
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="./images/SD/SD2.png" id="output_image" >
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="./images/SD/SD3.png" id="output_image" >
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="./images/SD/SD4.png" id="output_image">
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="./images/SD/owl.png" id="output_image">
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="./images/SD/raccon.png" id="output_image">
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="./images/SD/army.png" id="output_image">
+          </div>
+          
+        </div>
       </div>
     </div>
   </section>
-  <!--/ Method & Workflow -->
 
+  <section class="hero" id="dalle">
+    <div class="hero-body">
+      <div class="container is-max-desktop is-centered">
+        <h2 class="title has-text-centered">Comparison between our two-stage text-to-image model and existing state-of-the-art methods</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-steve" style="align-items: center;" >
+            <img src="images_dalle/img1_apple.png" id="output_image">
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="images_dalle/img2_car.png" id="output_image"  >
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="images_dalle/img3_dog.png" id="output_image" >
+          </div>
+          <!-- <div class="item item-steve" style="align-items: center;">
+            <img src="compare_4/img_4.png" id="output_image" >
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="compare_4/img_5.png" id="output_image">
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="compare_4/img_6.png" id="output_image">
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="compare_4/img_7.png" id="output_image">
+          </div>
+          <div class="item item-steve" style="align-items: center;">
+            <img src="compare_4/img_8.png" id="output_image">
+          </div> -->
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero is-light" id="niceprompt">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <div class="content has-text-centered">
+              <h2 class="title is-3 has-text-centered">Diverse generation from our method (GLIGEN+Ours) </h2>
+              <img src="images/nice_prompt.png" width="150%">
+            </div>
+          </div>
+        </div>
+      
+          
+        
+      </div>
+    </div>
+  </section>
+
+<!-- segmentation -->
+<!-- <section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <div class="content has-text-centered">
+            <h2 class="title is-3 has-text-centered">Result of ControlNet using mask guidance</h2>
+            <img src="images/controlnet.png" width="150%">
+          </div>
+        </div>
+      </div>
+    
+        
+      
+    </div>
+  </div>
+</section> -->
+ 
+   
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
@@ -481,6 +894,9 @@
       </div>
     </div>
   </section>
+
+  
+
   <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title"><a id="bibtex">BibTeX</a></h2>
@@ -914,12 +1330,12 @@
   </script>
 
   <script type="text/javascript">
-    var currentProList = ["dog", "cat", "raccoon", "panda"];
-    var currentPro = "dog";
+    var currentProList = ["panda" , "cat", "raccoon","dog" ];
+    var currentPro = "panda";
     var currentActList = ["crown", "party", 'cowboy', 'mushroom'];
     var currentAct = "crown";
-    var currentLocList = ["plant", "cake", "tv"];
-    var currentLoc = "plant";
+    var currentLocList = ["tv", "cake", "plant"];
+    var currentLoc = "tv";
 
     function ChangeProtagonist(idx) {
       var li_list = document.getElementById("current-pro-ul").children;
